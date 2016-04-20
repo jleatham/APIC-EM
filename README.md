@@ -25,7 +25,9 @@ It is recommend to go to learninglabs.cisco.com and go through a few labs for th
     ['5', 'https://sandboxapic.cisco.com:9443/api/v1/qos/status']
     => Please enter the number of API URL you would like to see:
  
-  
+ 
+ Can output raw JSON or print a pretty table.
+ Example table output:
   
   
     ================  ==============  ====================================
