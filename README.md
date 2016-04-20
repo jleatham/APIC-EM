@@ -27,6 +27,7 @@ It is recommend to go to learninglabs.cisco.com and go through a few labs for th
  
  
  Can output raw JSON or print a pretty table.
+ 
  Example table output:
   
   
