@@ -1,4 +1,6 @@
 # APIC-EM
+    main program: apic_api_explorer.py
+        functions and variables set in apicem_config.py and tabulate.py
 Scripts to manipulate the APIC-EM Sandbox from Cisco
 
 This is a script that allows you to connect to any APIC-EM server and pull data based on the APIs.  You can scroll through the available lists and select whatever API URL you wish.  It then prints the data in an easy to read format.
