@@ -77,13 +77,7 @@ while user_input != "0" :
                     print ("URL selected = ", url)
             user_input2 = input('=> Want to see an organized table or raw json results?\n  1  -  Organized table\n  2  -  Raw JSON\n => ')
             if user_input2 == "1" :
-                json_list = json.dumps(response_json)
-                json_list_regex = re.findall('\"\w+\":',json_list) # "\w+":   - Finds alphanumeric word inside "": the \" is to escape the quote and search for it literally
-                json_list_pruned = remove_duplicates(json_list_regex)
-                json_list_pruned.sort()
-                for item in json_list_pruned :
-                    if "response" not in item :
-                        print (item)
+                print_table_options(response_json)
                 build_pretty_table(response_json)
             elif user_input2 == "2" :
                 print_api_json(response_json)
@@ -110,13 +104,7 @@ while user_input != "0" :
                         print ("URL selected = ", url)
                 user_input2 = input('=> Want to see an organized table or raw json results?\n  1  -  Organized table\n  2  -  Raw JSON\n => ')
                 if user_input2 == "1" :
-                    json_list = json.dumps(response_json)
-                    json_list_regex = re.findall('\"\w+\":',json_list) # "\w+":   - Finds alphanumeric word inside "": the \" is to escape the quote and search for it literally
-                    json_list_pruned = remove_duplicates(json_list_regex)
-                    json_list_pruned.sort()
-                    for item in json_list_pruned :
-                        if "response" not in item :
-                            print (item)
+                    print_table_options(response_json)
                     build_pretty_table(response_json)
                 elif user_input2 == "2" :
                     print_api_json(response_json)

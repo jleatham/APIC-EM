@@ -154,6 +154,19 @@ def build_pretty_table(response_json):
     tab_json_1_deep_new(response_json,parent,child)
 
 
+def print_table_options(response_json):
+    json_list = json.dumps(response_json) # Converts to string: regex can only be searched in string form
+    json_list_regex_temp = re.findall('\"\w+\":',json_list) # "\w+":   - Finds alphanumeric word inside "": the \" is to escape the quote and search for it literally
+    json_list_regex0 = json.dumps(json_list_regex_temp) # Converts to string: regex can only be searched in string form
+    json_list_regex = re.findall('\w+',json_list_regex0) # \w+  - Finds words (gets rid of the quotes and colon:)
+    json_list_pruned = remove_duplicates(json_list_regex)
+    json_list_pruned.sort()
+    print ("\n\n")
+    for item in json_list_pruned :
+        if "response" not in item :
+            print (item)
+    print ("\n Recommended to include hostname/portname as well as id\n\n ")
+
 def get_variable_info(var) :
     #This is useful for figuring out what type of variable (List,tuple,Dict,string) that the json responses are in
     #For instance, tabulate only works with dicts, and regex searches only work with strings.
