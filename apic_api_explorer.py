@@ -86,7 +86,7 @@ while user_input != "0" :
                 url_list_id = [
                     "https://"+apicem_ip+"/api/"+version+"/interface/network-device/"+id,
                     "https://"+apicem_ip+"/api/"+version+"/network-device/"+id+"/config",
-                    "https://"+apicem_ip+"/api/"+version+"/host/user-id"+id,
+                    "https://"+apicem_ip+"/api/"+version+"/host/user-id/"+id,
                     "https://"+apicem_ip+"/api/"+version+"/host/"+id,
                     "https://"+apicem_ip+"/api/"+version+"/discovery/"+id,
                     "https://"+apicem_ip+"/api/"+version+"/application/"+id,
